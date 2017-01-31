@@ -1,0 +1,26 @@
+{
+	"name": "lfischer/wunderground-api",
+	"type": "library",
+	"description": "A simple PHP library for querying the Weather Underground API.",
+	"keywords": ["API", "weather"],
+	"homepage": "https://github.com/leonardfischer/wunderground-api",
+	"license": "MIT",
+	"authors": [{
+		"name": "Leonard Fischer",
+		"email": "post@leonard.fischer.de",
+		"homepage": "http://leonardfischer.de",
+		"role": "Developer"
+	}],
+    "support": {
+        "issues": "https://github.com/leonardfischer/wunderground-api/issues",
+        "source": "https://github.com/leonardfischer/wunderground-api"
+    },
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"lfischer\\wunderground\\": "src/"
+		}
+	}
+}
