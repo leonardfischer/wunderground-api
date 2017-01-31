@@ -127,6 +127,7 @@ class Request
 	 *
 	 * @param array $parameters
 	 * @return $this
+	 * @throws \ErrorException
 	 */
 	public function fetch (array $parameters = [])
 	{
@@ -153,21 +154,21 @@ class Request
 		]);
 
 		$this->responseJSON = file_get_contents($url);
-		$this->responseArray = json_decode($this->response, true);
+		$this->responseArray = json_decode($this->responseJSON, true);
 
 		if (!is_array($this->responseArray))
 		{
-			// @todo  Throw exception.
+			throw new \ErrorException('The Weather Underground API response returned no valid JSON: ' . $this->responseJSON);
 		} // if
 
 		if (!isset($this->responseArray['response']))
 		{
-			// @todo  Throw exception.
+			throw new \ErrorException('The Weather Underground API response is not set or empty: ' . $this->responseJSON);
 		} // if
 
 		if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error']))
 		{
-			// @todo  Throw exception.
+			throw new \ErrorException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'], true));
 		} // if
 
 		return $this;

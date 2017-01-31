@@ -10,10 +10,12 @@ namespace lfischer\wunderground;
 class API extends Request
 {
 	/**
-	 * Retrieves weather data by a (API internal) "city ID".
+	 * Retrieves weather data by a weather station ID.
+	 * See https://www.wunderground.com/wundermap/ for more information
 	 *
 	 * @param string $id
 	 * @return array
+	 * @throws \ErrorException
 	 */
 	public function getByPWSId ($id)
 	{
@@ -22,10 +24,11 @@ class API extends Request
 
 
 	/**
-	 * Retrieves weather data by a (API internal) "city ID".
+	 * Retrieves weather data by a airport code.
 	 *
 	 * @param string $code
 	 * @return array
+	 * @throws \ErrorException
 	 */
 	public function getByAirportCode ($code)
 	{
@@ -34,11 +37,12 @@ class API extends Request
 
 
 	/**
-	 * Retrieves weather data by given coordinates.
+	 * Retrieves weather data by geo coordinates.
 	 *
 	 * @param float $lat
 	 * @param float $lng
 	 * @return array
+	 * @throws \ErrorException
 	 */
 	public function getByCoordinates ($lat, $lng)
 	{
@@ -47,14 +51,28 @@ class API extends Request
 
 
 	/**
-	 * Retrieves weather data by given coordinates.
+	 * Retrieves weather data by a given country and city name.
 	 *
-	 * @param string $city
 	 * @param string $country
+	 * @param string $city
 	 * @return array
+	 * @throws \ErrorException
 	 */
-	public function getByLocation ($city, $country)
+	public function getByLocation ($country, $city)
 	{
 		return $this->fetch(['query' => $country . '/' . $city])->getResponseArray();
+	} // function
+
+
+	/**
+	 * Retrieves weather data by a given country and city name.
+	 *
+	 * @param string $zipcode
+	 * @return array
+	 * @throws \ErrorException
+	 */
+	public function getByUSZipcode ($zipcode)
+	{
+		return $this->fetch(['query' => $zipcode])->getResponseArray();
 	} // function
 } // class
