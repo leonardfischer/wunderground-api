@@ -131,18 +131,15 @@ class Request
 	 */
 	public function fetch (array $parameters = [])
 	{
-		if (isset($parameters['features']))
-		{
+		if (isset($parameters['features'])) {
 			$this->setFeature($parameters['features']);
 		} // if
 
-		if (isset($parameters['settings']))
-		{
+		if (isset($parameters['settings'])) {
 			$this->setSettings($parameters['settings']);
 		} // if
 
-		if (isset($parameters['query']))
-		{
+		if (isset($parameters['query'])) {
 			$this->setQuery($parameters['query']);
 		} // if
 
@@ -150,24 +147,21 @@ class Request
 			':apiKey' => $this->apiKey,
 			':features' => $this->feature,
 			':settings' => $this->settings,
-			':query' => $this->query
+			':query' => $this->query,
 		]);
 
-		$this->responseJSON = file_get_contents($url);
+		$this->responseJSON = $this->request($url);
 		$this->responseArray = json_decode($this->responseJSON, true);
 
-		if (!is_array($this->responseArray))
-		{
+		if (!is_array($this->responseArray)) {
 			throw new \ErrorException('The Weather Underground API response returned no valid JSON: ' . $this->responseJSON);
 		} // if
 
-		if (!isset($this->responseArray['response']))
-		{
+		if (!isset($this->responseArray['response'])) {
 			throw new \ErrorException('The Weather Underground API response is not set or empty: ' . $this->responseJSON);
 		} // if
 
-		if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error']))
-		{
+		if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error'])) {
 			throw new \ErrorException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'], true));
 		} // if
 
@@ -206,4 +200,18 @@ class Request
 	{
 		return json_decode($this->responseJSON);
 	} // function
+
+
+	/**
+	 * Method for getting the data from the API.
+	 *
+	 * @param $url
+	 * @return string
+	 */
+	protected function request ($url)
+	{
+		return @file_get_contents($url);
+	} // function
+
+
 } // class
