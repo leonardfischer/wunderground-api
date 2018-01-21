@@ -14,7 +14,7 @@ $weather = (new \lfischer\wunderground\API('<API-key here>'))->getByLocation('Ge
 
 
 ## Run tests
-Install dependencies:
+Install the dependencies:
 ```sh
 composer install
 ```
@@ -23,7 +23,7 @@ and run the tests:
 ```sh
 ./vendor/bin/phpunit
 ```
-uncommenting the `<logging>` element of `phpunit.xml` configuration file will generate the coverage html file
+Uncommenting the `<logging>` element of `phpunit.xml` configuration file will generate the coverage html file
 when the tests are run.
 
 
