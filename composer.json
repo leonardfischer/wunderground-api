@@ -10,6 +10,10 @@
 		"email": "post@leonard.fischer.de",
 		"homepage": "http://leonardfischer.de",
 		"role": "Developer"
+	}, {
+		"name": "Stefano Borghi",
+		"homepage": "https://github.com/stebogit",
+		"role": "Developer"
 	}],
     "support": {
         "issues": "https://github.com/leonardfischer/wunderground-api/issues",
