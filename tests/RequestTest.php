@@ -5,7 +5,7 @@ namespace lfischer\wunderground;
 
 use PHPUnit\Framework\TestCase;
 
-class ApiTest extends TestCase
+class RequestTest extends TestCase
 {
 
 	public function testExample ()
@@ -14,4 +14,3 @@ class ApiTest extends TestCase
 	}
 
 }
-

@@ -34,6 +34,11 @@ class Request
 	/**
 	 * @var string
 	 */
+	protected $lastQuery = null;
+
+	/**
+	 * @var string
+	 */
 	protected $responseJSON = null;
 
 	/**
@@ -150,6 +155,7 @@ class Request
 			':query' => $this->query,
 		]);
 
+
 		$this->responseJSON = $this->request($url);
 		$this->responseArray = json_decode($this->responseJSON, true);
 
@@ -162,7 +168,8 @@ class Request
 		} // if
 
 		if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error'])) {
-			throw new \ErrorException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'], true));
+			throw new \ErrorException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'],
+					true));
 		} // if
 
 		return $this;
@@ -210,7 +217,19 @@ class Request
 	 */
 	protected function request ($url)
 	{
+		$this->lastQuery = $url;
 		return @file_get_contents($url);
+	} // function
+
+
+	/**
+	 * Method for getting the last called query.
+	 *
+	 * @return string
+	 */
+	public function getLastQuery ()
+	{
+		return $this->lastQuery;
 	} // function
 
 
