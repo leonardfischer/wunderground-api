@@ -1,0 +1,14 @@
+# IntelliJ project files
+.idea
+out
+
+macOS template
+# General
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+vendor/
