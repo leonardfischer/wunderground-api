@@ -12,3 +12,5 @@ macOS template
 Icon
 
 vendor/
+
+tests/build/
