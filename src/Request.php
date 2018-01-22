@@ -191,16 +191,15 @@ class Request
 		$this->responseArray = json_decode($this->responseJSON, true);
 
 		if (!is_array($this->responseArray)) {
-			throw new \ErrorException('The Weather Underground API response returned no valid JSON: ' . $this->responseJSON);
+			throw new WunderException('The Weather Underground API response returned no valid JSON: ' . $this->responseJSON);
 		} // if
 
 		if (!isset($this->responseArray['response'])) {
-			throw new \ErrorException('The Weather Underground API response is not set or empty: ' . $this->responseJSON);
+			throw new WunderException('The Weather Underground API response is not set or empty: ' . $this->responseJSON);
 		} // if
 
 		if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error'])) {
-			throw new \ErrorException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'],
-					true));
+			throw new WunderException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'], true));
 		} // if
 
 		return $this;

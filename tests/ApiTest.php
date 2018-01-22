@@ -3,6 +3,8 @@
 namespace lfischer\wunderground\tests;
 
 
+use lfischer\wunderground\API;
+
 class ApiTest extends BaseTest
 {
 	protected $API;
@@ -11,7 +13,7 @@ class ApiTest extends BaseTest
 	public function setUp ()
 	{
 		parent::setUp();
-		$this->API = $this->createMockApiReturningData();
+		$this->API = $this->createStub(API::class, 'request', '{"response": "OK"}');
 	}
 
 

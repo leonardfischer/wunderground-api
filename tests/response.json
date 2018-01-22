@@ -1,0 +1,789 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "geolookup": 1,
+      "conditions": 1,
+      "forecast": 1
+    }
+  },
+  "location": {
+    "type": "INTLCITY",
+    "country": "AU",
+    "country_iso3166": "AU",
+    "country_name": "Australia",
+    "state": "NW",
+    "city": "Sydney",
+    "tz_short": "EST",
+    "tz_long": "Australia/Sydney",
+    "lat": "-33.95000076",
+    "lon": "151.17999268",
+    "zip": "00000",
+    "magic": "1",
+    "wmo": "94767",
+    "l": "/q/zmw:00000.1.94767",
+    "requesturl": "global/stations/94767.html",
+    "wuiurl": "https://www.wunderground.com/global/stations/94767.html",
+    "nearby_weather_stations": {
+      "airport": {
+        "station": [
+          {
+            "city": "Sydney Airport",
+            "state": "",
+            "country": "Australia",
+            "icao": "YSSY",
+            "lat": "-33.95000076",
+            "lon": "151.18333435"
+          },
+          {
+            "city": "Sydney",
+            "state": "",
+            "country": "AU",
+            "icao": "YSSY",
+            "lat": "-33.95000076",
+            "lon": "151.17999268"
+          },
+          {
+            "city": "Richmond (NSW)",
+            "state": "",
+            "country": "AU",
+            "icao": "YSRI",
+            "lat": "-33.59999847",
+            "lon": "150.77999878"
+          }
+        ]
+      },
+      "pws": {
+        "station": [
+          {
+            "neighborhood": "Matraville",
+            "city": "Sydney",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWMATR2",
+            "distance_km": 4,
+            "distance_mi": 2
+          },
+          {
+            "neighborhood": "Bardwell Park",
+            "city": "Sydney",
+            "state": "New South Wales",
+            "country": "AUSTRALIA",
+            "id": "INEWSOUT37",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "APRSWXNET Sydney AU",
+            "city": "Little Bay",
+            "state": "NW",
+            "country": "AU",
+            "id": "MD5399",
+            "distance_km": 5,
+            "distance_mi": 3
+          },
+          {
+            "neighborhood": "Kingsgrove",
+            "city": "Kingsgrove",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWKING6",
+            "distance_km": 7,
+            "distance_mi": 4
+          },
+          {
+            "neighborhood": "Potts Point",
+            "city": "Potts Point",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWPOTT2",
+            "distance_km": 9,
+            "distance_mi": 5
+          },
+          {
+            "neighborhood": "Old\u0027s Park",
+            "city": "Penshurst",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWPENS2",
+            "distance_km": 9,
+            "distance_mi": 5
+          },
+          {
+            "neighborhood": "Cronulla - Cecil Apartments",
+            "city": "Cronulla - Sydney",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWSYDN19",
+            "distance_km": 11,
+            "distance_mi": 7
+          },
+          {
+            "neighborhood": "Caringbah South -The Shire",
+            "city": "Sydney",
+            "state": "NSW",
+            "country": "Australia",
+            "id": "INSWCARI2",
+            "distance_km": 12,
+            "distance_mi": 7
+          },
+          {
+            "neighborhood": "Kirrawee",
+            "city": "Kirrawee",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWKIRR2",
+            "distance_km": 12,
+            "distance_mi": 7
+          },
+          {
+            "neighborhood": "Lower North Shore",
+            "city": "Linley Point (Lane Cove)",
+            "state": "NEW SOUTH WALES",
+            "country": "AUSTRALIA",
+            "id": "INEWSOUT83",
+            "distance_km": 13,
+            "distance_mi": 8
+          },
+          {
+            "neighborhood": "Gymea Bay South of Sydney near Royal National Park",
+            "city": "Sydney",
+            "state": "NSW",
+            "country": "Australia",
+            "id": "ISYDNEY2",
+            "distance_km": 14,
+            "distance_mi": 8
+          },
+          {
+            "neighborhood": "",
+            "city": "Chatswood",
+            "state": "New South Wales",
+            "country": "Australia",
+            "id": "INSWCHAT1",
+            "distance_km": 16,
+            "distance_mi": 9
+          },
+          {
+            "neighborhood": "Sutherland Shire",
+            "city": "LOFTUS",
+            "state": "NEW SOUTH WALES",
+            "country": "AUSTRALIA",
+            "id": "INEWSOUT125",
+            "distance_km": 16,
+            "distance_mi": 9
+          },
+          {
+            "neighborhood": "Loftus Heights",
+            "city": "Loftus",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWLOFT2",
+            "distance_km": 16,
+            "distance_mi": 10
+          },
+          {
+            "neighborhood": "Chatswood",
+            "city": "Sydney",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWSYDN21",
+            "distance_km": 18,
+            "distance_mi": 10
+          },
+          {
+            "neighborhood": "North Ryde Sydney",
+            "city": "Macquarie Park",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWMACQ2",
+            "distance_km": 18,
+            "distance_mi": 11
+          },
+          {
+            "neighborhood": "Sutherland Shire",
+            "city": "Engadine",
+            "state": "NSW",
+            "country": "Australia",
+            "id": "KNSENGAD1",
+            "distance_km": 19,
+            "distance_mi": 11
+          },
+          {
+            "neighborhood": "",
+            "city": "Eastwood",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWEAST5",
+            "distance_km": 20,
+            "distance_mi": 12
+          },
+          {
+            "neighborhood": "Epping",
+            "city": "Epping",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWEPPI2",
+            "distance_km": 21,
+            "distance_mi": 13
+          },
+          {
+            "neighborhood": "Moorebank",
+            "city": "Moorebank",
+            "state": "NSW",
+            "country": "Australia",
+            "id": "INSWMOOR1",
+            "distance_km": 21,
+            "distance_mi": 13
+          },
+          {
+            "neighborhood": "",
+            "city": "Telopea",
+            "state": "NEW SOUTH WALES",
+            "country": "Australia",
+            "id": "INEWSOUT126",
+            "distance_km": 21,
+            "distance_mi": 13
+          },
+          {
+            "neighborhood": "Sutherland Shire",
+            "city": "Heathcote",
+            "state": "New South Wales",
+            "country": "Australia",
+            "id": "INSWHEAT2",
+            "distance_km": 22,
+            "distance_mi": 13
+          },
+          {
+            "neighborhood": "Merrylands West",
+            "city": "Merrylands West",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWMERR3",
+            "distance_km": 22,
+            "distance_mi": 13
+          },
+          {
+            "neighborhood": "South Turramurra",
+            "city": "near Sydney",
+            "state": "NSW",
+            "country": "Australia",
+            "id": "INSWTURR1",
+            "distance_km": 22,
+            "distance_mi": 13
+          },
+          {
+            "neighborhood": "Beacon Hill",
+            "city": "Sydney",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWBEAC2",
+            "distance_km": 23,
+            "distance_mi": 14
+          },
+          {
+            "neighborhood": "Carlingford",
+            "city": "Carlingford",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWCARL2",
+            "distance_km": 23,
+            "distance_mi": 14
+          },
+          {
+            "neighborhood": "St. Ives",
+            "city": "Sydney",
+            "state": "NSW",
+            "country": "AUSTRALIA",
+            "id": "INSWSTIV2",
+            "distance_km": 23,
+            "distance_mi": 14
+          },
+          {
+            "neighborhood": "APRSWXNET Sydney AU",
+            "city": "Maryville",
+            "state": "NW",
+            "country": "AU",
+            "id": "MD5869",
+            "distance_km": 24,
+            "distance_mi": 14
+          },
+          {
+            "neighborhood": "Beecroft",
+            "city": "Beecroft",
+            "state": "NSW",
+            "country": "Australia",
+            "id": "INSWBEEC1",
+            "distance_km": 25,
+            "distance_mi": 15
+          },
+          {
+            "neighborhood": "West Pennant Hills",
+            "city": "West Pennant Hills",
+            "state": "NSW",
+            "country": "Australia",
+            "id": "INSWWEST1",
+            "distance_km": 25,
+            "distance_mi": 15
+          }
+        ]
+      }
+    }
+  },
+  "current_observation": {
+    "image": {
+      "url": "http://icons-ak.wxug.com/graphics/wu2/logo_130x80.png",
+      "title": "Weather Underground",
+      "link": "http://www.wunderground.com"
+    },
+    "display_location": {
+      "full": "Sydney, New South Wales",
+      "city": "Sydney",
+      "state": "NW",
+      "state_name": "New South Wales",
+      "country": "AU",
+      "country_iso3166": "AU",
+      "zip": "00000",
+      "latitude": "-33.95000076",
+      "longitude": "151.17999268",
+      "elevation": "3.00000000"
+    },
+    "observation_location": {
+      "full": "Sydney, ",
+      "city": "Sydney",
+      "state": "",
+      "country": "AU",
+      "country_iso3166": "AU",
+      "latitude": "-33.95000076",
+      "longitude": "151.17999268",
+      "elevation": "10 ft"
+    },
+    "estimated": {},
+    "station_id": "YSSY",
+    "observation_time": "Last Updated on July 12, 4:00 AM EST",
+    "observation_time_rfc822": "Thu, 12 Jul 2012 04:00:00 +1000",
+    "observation_epoch": "1342029600",
+    "local_time_rfc822": "Thu, 12 Jul 2012 04:35:30 +1000",
+    "local_epoch": "1342031730",
+    "local_tz_short": "EST",
+    "local_tz_long": "Australia/Sydney",
+    "local_tz_offset": "+1000",
+    "weather": "Clear",
+    "temperature_string": "52 F (11 C)",
+    "temp_f": 52,
+    "temp_c": 11,
+    "relative_humidity": "76%",
+    "wind_string": "From the North at 6 MPH",
+    "wind_dir": "North",
+    "wind_degrees": 10,
+    "wind_mph": 6,
+    "wind_gust_mph": 0,
+    "wind_kph": 9,
+    "wind_gust_kph": 0,
+    "pressure_mb": "1018",
+    "pressure_in": "30.06",
+    "pressure_trend": "0",
+    "dewpoint_string": "45 F (7 C)",
+    "dewpoint_f": 45,
+    "dewpoint_c": 7,
+    "heat_index_string": "NA",
+    "heat_index_f": "NA",
+    "heat_index_c": "NA",
+    "windchill_string": "NA",
+    "windchill_f": "NA",
+    "windchill_c": "NA",
+    "feelslike_string": "52 F (11 C)",
+    "feelslike_f": "52",
+    "feelslike_c": "11",
+    "visibility_mi": "N/A",
+    "visibility_km": "N/A",
+    "solarradiation": "",
+    "UV": "-1",
+    "precip_1hr_string": "-9999.00 in (-9999.00 mm)",
+    "precip_1hr_in": "-9999.00",
+    "precip_1hr_metric": "-9999.00",
+    "precip_today_string": "0.00 in (0.0 mm)",
+    "precip_today_in": "0.00",
+    "precip_today_metric": "0.0",
+    "icon": "clear",
+    "icon_url": "http://icons-ak.wxug.com/i/c/k/nt_clear.gif",
+    "forecast_url": "http://www.wunderground.com/global/stations/94767.html",
+    "history_url": "http://www.wunderground.com/history/airport/YSSY/2012/7/12/DailyHistory.html",
+    "ob_url": "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=-33.95000076,151.17999268"
+  },
+  "forecast": {
+    "txt_forecast": {
+      "date": "10:00 AM EST",
+      "forecastday": [
+        {
+          "period": 0,
+          "icon": "rain",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/rain.gif",
+          "title": "Thursday",
+          "fcttext": "Overcast with rain. High of 66F. Winds from the NNW at 5 to 10 mph. Chance of rain 80% with rainfall amounts near 0.4 in. possible.",
+          "fcttext_metric": "Overcast with rain. High of 19C. Winds from the NNW at 10 to 15 km/h. Chance of rain 80% with rainfall amounts near 10.7 mm possible.",
+          "pop": "80"
+        },
+        {
+          "period": 1,
+          "icon": "rain",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/rain.gif",
+          "title": "Thursday Night",
+          "fcttext": "Overcast with a chance of rain, then rain after midnight. Low of 54F. Winds from the NNW at 5 to 10 mph. Chance of rain 80% with rainfall amounts near 0.3 in. possible.",
+          "fcttext_metric": "Overcast with a chance of rain, then rain after midnight. Low of 12C. Winds from the NNW at 10 to 15 km/h. Chance of rain 80% with rainfall amounts near 7.4 mm possible.",
+          "pop": "80"
+        },
+        {
+          "period": 2,
+          "icon": "rain",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/rain.gif",
+          "title": "Friday",
+          "fcttext": "Overcast with rain in the morning, then mostly cloudy. High of 70F. Winds from the NNW at 10 to 15 mph. Chance of rain 60%.",
+          "fcttext_metric": "Overcast with rain in the morning, then mostly cloudy. High of 21C. Breezy. Winds from the NNW at 15 to 20 km/h. Chance of rain 60% with rainfall amounts near 0.5 mm possible.",
+          "pop": "60"
+        },
+        {
+          "period": 3,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Friday Night",
+          "fcttext": "Mostly cloudy in the evening, then partly cloudy. Low of 52F. Winds from the WNW at 5 to 15 mph.",
+          "fcttext_metric": "Partly cloudy. Low of 11C. Breezy. Winds from the WNW at 10 to 20 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 4,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Saturday",
+          "fcttext": "Partly cloudy. High of 63F. Winds from the WNW at 10 to 15 mph.",
+          "fcttext_metric": "Partly cloudy. High of 17C. Breezy. Winds from the WNW at 15 to 20 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 5,
+          "icon": "clear",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+          "title": "Saturday Night",
+          "fcttext": "Clear. Low of 46F. Winds from the West at 10 to 15 mph.",
+          "fcttext_metric": "Clear. Low of 8C. Breezy. Winds from the West at 15 to 20 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 6,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Sunday",
+          "fcttext": "Partly cloudy. High of 59F. Winds from the West at 10 to 15 mph.",
+          "fcttext_metric": "Partly cloudy. High of 15C. Breezy. Winds from the West at 15 to 20 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 7,
+          "icon": "clear",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/clear.gif",
+          "title": "Sunday Night",
+          "fcttext": "Clear. Low of 46F. Winds from the West at 5 to 15 mph.",
+          "fcttext_metric": "Clear. Low of 8C. Breezy. Winds from the West at 10 to 20 km/h.",
+          "pop": "0"
+        }
+      ]
+    },
+    "simpleforecast": {
+      "forecastday": [
+        {
+          "date": {
+            "epoch": "1342094400",
+            "pretty": "10:00 PM EST on July 12, 2012",
+            "day": 12,
+            "month": 7,
+            "year": 2012,
+            "yday": 193,
+            "hour": 22,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "July",
+            "weekday_short": "Thu",
+            "weekday": "Thursday",
+            "ampm": "PM",
+            "tz_short": "EST",
+            "tz_long": "Australia/Sydney"
+          },
+          "period": 1,
+          "high": {
+            "fahrenheit": "66",
+            "celsius": "19"
+          },
+          "low": {
+            "fahrenheit": "54",
+            "celsius": "12"
+          },
+          "conditions": "Rain",
+          "icon": "rain",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/rain.gif",
+          "skyicon": "cloudy",
+          "pop": 80,
+          "qpf_allday": {
+            "in": 0.48,
+            "mm": 12.2
+          },
+          "qpf_day": {
+            "in": 0.42,
+            "mm": 10.7
+          },
+          "qpf_night": {
+            "in": 0.29,
+            "mm": 7.4
+          },
+          "snow_allday": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_day": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_night": {
+            "in": 0,
+            "cm": 0
+          },
+          "maxwind": {
+            "mph": 8,
+            "kph": 13,
+            "dir": "NW",
+            "degrees": 319
+          },
+          "avewind": {
+            "mph": 7,
+            "kph": 11,
+            "dir": "NNW",
+            "degrees": 336
+          },
+          "avehumidity": 84,
+          "maxhumidity": 88,
+          "minhumidity": 75
+        },
+        {
+          "date": {
+            "epoch": "1342180800",
+            "pretty": "10:00 PM EST on July 13, 2012",
+            "day": 13,
+            "month": 7,
+            "year": 2012,
+            "yday": 194,
+            "hour": 22,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "July",
+            "weekday_short": "Fri",
+            "weekday": "Friday",
+            "ampm": "PM",
+            "tz_short": "EST",
+            "tz_long": "Australia/Sydney"
+          },
+          "period": 2,
+          "high": {
+            "fahrenheit": "70",
+            "celsius": "21"
+          },
+          "low": {
+            "fahrenheit": "52",
+            "celsius": "11"
+          },
+          "conditions": "Rain",
+          "icon": "rain",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/rain.gif",
+          "skyicon": "partlycloudy",
+          "pop": 60,
+          "qpf_allday": {
+            "in": 0.26,
+            "mm": 6.6
+          },
+          "qpf_day": {
+            "in": 0.02,
+            "mm": 0.5
+          },
+          "qpf_night": {
+            "in": 0.01,
+            "mm": 0.3
+          },
+          "snow_allday": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_day": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_night": {
+            "in": 0,
+            "cm": 0
+          },
+          "maxwind": {
+            "mph": 11,
+            "kph": 18,
+            "dir": "NNW",
+            "degrees": 347
+          },
+          "avewind": {
+            "mph": 9,
+            "kph": 14,
+            "dir": "WNW",
+            "degrees": 289
+          },
+          "avehumidity": 71,
+          "maxhumidity": 95,
+          "minhumidity": 67
+        },
+        {
+          "date": {
+            "epoch": "1342267200",
+            "pretty": "10:00 PM EST on July 14, 2012",
+            "day": 14,
+            "month": 7,
+            "year": 2012,
+            "yday": 195,
+            "hour": 22,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "July",
+            "weekday_short": "Sat",
+            "weekday": "Saturday",
+            "ampm": "PM",
+            "tz_short": "EST",
+            "tz_long": "Australia/Sydney"
+          },
+          "period": 3,
+          "high": {
+            "fahrenheit": "63",
+            "celsius": "17"
+          },
+          "low": {
+            "fahrenheit": "46",
+            "celsius": "8"
+          },
+          "conditions": "Partly Cloudy",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "mostlysunny",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.00,
+            "mm": 0.0
+          },
+          "qpf_day": {
+            "in": 0.00,
+            "mm": 0.0
+          },
+          "qpf_night": {
+            "in": 0.00,
+            "mm": 0.0
+          },
+          "snow_allday": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_day": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_night": {
+            "in": 0,
+            "cm": 0
+          },
+          "maxwind": {
+            "mph": 11,
+            "kph": 18,
+            "dir": "NW",
+            "degrees": 308
+          },
+          "avewind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "West",
+            "degrees": 279
+          },
+          "avehumidity": 61,
+          "maxhumidity": 86,
+          "minhumidity": 46
+        },
+        {
+          "date": {
+            "epoch": "1342353600",
+            "pretty": "10:00 PM EST on July 15, 2012",
+            "day": 15,
+            "month": 7,
+            "year": 2012,
+            "yday": 196,
+            "hour": 22,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "July",
+            "weekday_short": "Sun",
+            "weekday": "Sunday",
+            "ampm": "PM",
+            "tz_short": "EST",
+            "tz_long": "Australia/Sydney"
+          },
+          "period": 4,
+          "high": {
+            "fahrenheit": "59",
+            "celsius": "15"
+          },
+          "low": {
+            "fahrenheit": "46",
+            "celsius": "8"
+          },
+          "conditions": "Partly Cloudy",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "mostlysunny",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.00,
+            "mm": 0.0
+          },
+          "qpf_day": {
+            "in": 0.00,
+            "mm": 0.0
+          },
+          "qpf_night": {
+            "in": 0.00,
+            "mm": 0.0
+          },
+          "snow_allday": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_day": {
+            "in": 0,
+            "cm": 0
+          },
+          "snow_night": {
+            "in": 0,
+            "cm": 0
+          },
+          "maxwind": {
+            "mph": 12,
+            "kph": 19,
+            "dir": "West",
+            "degrees": 266
+          },
+          "avewind": {
+            "mph": 11,
+            "kph": 18,
+            "dir": "West",
+            "degrees": 266
+          },
+          "avehumidity": 57,
+          "maxhumidity": 80,
+          "minhumidity": 41
+        }
+      ]
+    }
+  }
+}
