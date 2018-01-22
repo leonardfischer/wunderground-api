@@ -10,6 +10,10 @@
 		"email": "post@leonard.fischer.de",
 		"homepage": "http://leonardfischer.de",
 		"role": "Developer"
+	}, {
+		"name": "Stefano Borghi",
+		"homepage": "https://github.com/stebogit",
+		"role": "Developer"
 	}],
     "support": {
         "issues": "https://github.com/leonardfischer/wunderground-api/issues",
@@ -18,9 +22,17 @@
 	"require": {
 		"php": ">=5.4.0"
 	},
+	"require-dev": {
+		"phpunit/phpunit": "^6"
+	},
 	"autoload": {
 		"psr-4": {
 			"lfischer\\wunderground\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"lfischer\\wunderground\\tests\\": "tests/"
 		}
 	}
 }

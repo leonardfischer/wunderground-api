@@ -19,7 +19,7 @@ class Request
 	/**
 	 * @var string
 	 */
-	protected $feature = 'conditions';
+	protected $features = 'conditions';
 
 	/**
 	 * @var string
@@ -30,6 +30,11 @@ class Request
 	 * @var string
 	 */
 	protected $query = 'CA/San_Francisco';
+
+	/**
+	 * @var string
+	 */
+	protected $lastQuery = null;
 
 	/**
 	 * @var string
@@ -72,12 +77,42 @@ class Request
 	 * - webcams
 	 * - yesterday
 	 *
-	 * @param string $feature
+	 * @param string|array $features
 	 * @return $this
 	 */
-	public function setFeature ($feature)
+	public function setFeature ($features)
 	{
-		$this->feature = $feature;
+		$this->setFeatures([$features]);
+
+		return $this;
+	} // function
+
+
+	/**
+	 * Set multiple API features. Available features:
+	 * - alerts
+	 * - almanac
+	 * - astronomy
+	 * - conditions
+	 * - currenthurricane
+	 * - forecast
+	 * - forecast10day
+	 * - geolookup
+	 * - history
+	 * - hourly
+	 * - hourly10day
+	 * - planner
+	 * - rawtide
+	 * - tide
+	 * - webcams
+	 * - yesterday
+	 *
+	 * @param array $features
+	 * @return $this
+	 */
+	public function setFeatures ($features)
+	{
+		$this->features = implode('/', $features);
 
 		return $this;
 	} // function
@@ -131,44 +166,40 @@ class Request
 	 */
 	public function fetch (array $parameters = [])
 	{
-		if (isset($parameters['features']))
-		{
+		if (isset($parameters['features'])) {
 			$this->setFeature($parameters['features']);
 		} // if
 
-		if (isset($parameters['settings']))
-		{
+		if (isset($parameters['settings'])) {
 			$this->setSettings($parameters['settings']);
 		} // if
 
-		if (isset($parameters['query']))
-		{
+		if (isset($parameters['query'])) {
 			$this->setQuery($parameters['query']);
 		} // if
 
 		$url = strtr(self::URL, [
 			':apiKey' => $this->apiKey,
-			':features' => $this->feature,
+			':features' => $this->features,
 			':settings' => $this->settings,
-			':query' => $this->query
+			':query' => $this->query,
 		]);
 
-		$this->responseJSON = file_get_contents($url);
+		$this->lastQuery = $url;
+
+		$this->responseJSON = $this->request($url);
 		$this->responseArray = json_decode($this->responseJSON, true);
 
-		if (!is_array($this->responseArray))
-		{
-			throw new \ErrorException('The Weather Underground API response returned no valid JSON: ' . $this->responseJSON);
+		if (!is_array($this->responseArray)) {
+			throw new WunderException('The Weather Underground API response returned no valid JSON: ' . $this->responseJSON);
 		} // if
 
-		if (!isset($this->responseArray['response']))
-		{
-			throw new \ErrorException('The Weather Underground API response is not set or empty: ' . $this->responseJSON);
+		if (!isset($this->responseArray['response'])) {
+			throw new WunderException('The Weather Underground API response is not set or empty: ' . $this->responseJSON);
 		} // if
 
-		if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error']))
-		{
-			throw new \ErrorException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'], true));
+		if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error'])) {
+			throw new WunderException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'], true));
 		} // if
 
 		return $this;
@@ -206,4 +237,29 @@ class Request
 	{
 		return json_decode($this->responseJSON);
 	} // function
+
+
+	/**
+	 * Method for getting the data from the API.
+	 *
+	 * @param $url
+	 * @return string
+	 */
+	protected function request ($url)
+	{
+		return @file_get_contents($url);
+	} // function
+
+
+	/**
+	 * Method for getting the last called query.
+	 *
+	 * @return string
+	 */
+	public function getLastQuery ()
+	{
+		return $this->lastQuery;
+	} // function
+
+
 } // class

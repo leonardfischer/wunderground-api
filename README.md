@@ -12,6 +12,21 @@ Using the API is very easy - you'll only need to provide a API key (Get one [her
 $weather = (new \lfischer\wunderground\API('<API-key here>'))->getByLocation('Germany', 'Dusseldorf');
 ```
 
+
+## Run tests
+Install the dependencies:
+```sh
+composer install
+```
+and run the tests:
+
+```sh
+./vendor/bin/phpunit
+```
+Uncommenting the `<logging>` element of `phpunit.xml` configuration file will generate the coverage html file
+when the tests are run.
+
+
 ## Future to-dos / nice-to-have
 
 At some point I'd like to improve this client to be as readable as possible. For example:
