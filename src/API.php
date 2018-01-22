@@ -69,13 +69,28 @@ class API extends Request
 	/**
 	 * Retrieves weather data by a given country and city name.
 	 *
-	 * @param string $zipcode
+	 * @param string|int $zipcode
 	 * @return array
 	 * @throws \ErrorException
 	 */
 	public function getByUSZipcode ($zipcode)
 	{
 		return $this->fetch(['query' => $zipcode])->getResponseArray();
+	} // function
+
+
+	/**
+	 * Retrieves weather data by a given country and city name.
+	 *
+	 * @param string $state
+	 * @param string $city
+	 * @return array
+	 * @throws \ErrorException
+	 */
+	public function getByUSCity ($state, $city)
+	{
+		$c = str_replace(' ', '_', $city);
+		return $this->fetch(['query' => $state . '/' . $c])->getResponseArray();
 	} // function
 
 
@@ -90,7 +105,7 @@ class API extends Request
 	 */
 	public function getForecast ($location)
 	{
-		return $this->setFeature('forecast')->setFeature('hourly')->setQuery($location)->fetch()->getResponseArray();
+		return $this->setFeatures(['forecast', 'hourly'])->setQuery($location)->fetch()->getResponseArray();
 	} // function
 
 
@@ -105,7 +120,7 @@ class API extends Request
 	 */
 	public function getExtendedForecast ($location)
 	{
-		return $this->setFeature('forecast10day')->setFeature('hourly10day')->setQuery($location)->fetch()->getResponseArray();
+		return $this->setFeatures(['forecast10day', 'hourly10day'])->setQuery($location)->fetch()->getResponseArray();
 	} // function
 
 

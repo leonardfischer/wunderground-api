@@ -1,11 +1,9 @@
 <?php
 
-namespace lfischer\wunderground;
+namespace lfischer\wunderground\tests;
 
 
-use PHPUnit\Framework\TestCase;
-
-class RequestTest extends TestCase
+class RequestTest extends BaseTest
 {
 
 	public function testExample ()

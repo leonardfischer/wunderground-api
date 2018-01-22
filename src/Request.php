@@ -19,7 +19,7 @@ class Request
 	/**
 	 * @var string
 	 */
-	protected $feature = 'conditions';
+	protected $features = 'conditions';
 
 	/**
 	 * @var string
@@ -77,12 +77,42 @@ class Request
 	 * - webcams
 	 * - yesterday
 	 *
-	 * @param string $feature
+	 * @param string|array $features
 	 * @return $this
 	 */
-	public function setFeature ($feature)
+	public function setFeature ($features)
 	{
-		$this->feature = $feature;
+		$this->setFeatures([$features]);
+
+		return $this;
+	} // function
+
+
+	/**
+	 * Set multiple API features. Available features:
+	 * - alerts
+	 * - almanac
+	 * - astronomy
+	 * - conditions
+	 * - currenthurricane
+	 * - forecast
+	 * - forecast10day
+	 * - geolookup
+	 * - history
+	 * - hourly
+	 * - hourly10day
+	 * - planner
+	 * - rawtide
+	 * - tide
+	 * - webcams
+	 * - yesterday
+	 *
+	 * @param array $features
+	 * @return $this
+	 */
+	public function setFeatures ($features)
+	{
+		$this->features = implode('/', $features);
 
 		return $this;
 	} // function
@@ -150,11 +180,12 @@ class Request
 
 		$url = strtr(self::URL, [
 			':apiKey' => $this->apiKey,
-			':features' => $this->feature,
+			':features' => $this->features,
 			':settings' => $this->settings,
 			':query' => $this->query,
 		]);
 
+		$this->lastQuery = $url;
 
 		$this->responseJSON = $this->request($url);
 		$this->responseArray = json_decode($this->responseJSON, true);
@@ -217,7 +248,6 @@ class Request
 	 */
 	protected function request ($url)
 	{
-		$this->lastQuery = $url;
 		return @file_get_contents($url);
 	} // function
 
