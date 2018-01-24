@@ -33,10 +33,15 @@ At some point I'd like to improve this client to be as readable as possible. For
 
 ```php
 use lfischer\wunderground;
-
+ 
 $weather = (new API('<API-key here>'))
     ->getConditions()
     ->byLocation('Germany', 'Dusseldorf')
     ->fetch()
-	->asArray();
+    ->asArray();
 ```
+
+## Contributors
+
+ - **Leonard Fischer** - initial programming [Github profile](https://github.com/leonardfischer)
+ - **Stefano Borghi** - writing tests and improving code [Github profile](https://github.com/stebogit)
