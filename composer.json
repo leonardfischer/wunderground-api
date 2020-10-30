@@ -1,38 +1,44 @@
 {
-	"name": "lfischer/wunderground-api",
-	"type": "library",
-	"description": "A simple PHP library for querying the Weather Underground API.",
-	"keywords": ["API", "weather"],
-	"homepage": "https://github.com/leonardfischer/wunderground-api",
-	"license": "MIT",
-	"authors": [{
-		"name": "Leonard Fischer",
-		"email": "post@leonard.fischer.de",
-		"homepage": "http://leonardfischer.de",
-		"role": "Developer"
-	}, {
-		"name": "Stefano Borghi",
-		"homepage": "https://github.com/stebogit",
-		"role": "Developer"
-	}],
-    "support": {
-        "issues": "https://github.com/leonardfischer/wunderground-api/issues",
-        "source": "https://github.com/leonardfischer/wunderground-api"
+  "name": "lfischer/wunderground-api",
+  "type": "library",
+  "description": "A simple PHP library for querying the Weather Underground API.",
+  "keywords": ["API", "weather"],
+  "homepage": "https://github.com/leonardfischer/wunderground-api",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Leonard Fischer",
+      "email": "post@leonard.fischer.de",
+      "homepage": "http://leonardfischer.de",
+      "role": "Developer"
     },
-	"require": {
-		"php": ">=5.4.0"
-	},
-	"require-dev": {
-		"phpunit/phpunit": "^6"
-	},
-	"autoload": {
-		"psr-4": {
-			"lfischer\\wunderground\\": "src/"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"lfischer\\wunderground\\tests\\": "tests/"
-		}
-	}
+    {
+      "name": "Stefano Borghi",
+      "homepage": "https://github.com/stebogit",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/leonardfischer/wunderground-api/issues",
+    "source": "https://github.com/leonardfischer/wunderground-api"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "php": ">=7.3",
+    "phpunit/phpunit": "^9.4",
+    "psalm/phar": "^4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "lfischer\\wunderground\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "lfischer\\wunderground\\tests\\": "tests/"
+    }
+  }
 }
