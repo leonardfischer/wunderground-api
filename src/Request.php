@@ -34,27 +34,27 @@ class Request
     /**
      * @var string
      */
-    protected $lastQuery = null;
+    protected $lastQuery = '';
 
     /**
      * @var string
      */
-    protected $responseJSON = null;
+    protected $responseJSON = '';
 
     /**
      * @var array
      */
-    protected $responseArray = null;
+    protected $responseArray = [];
 
     /**
      * Constructor.
      *
-     * @param $apiKey
+     * @param string $apiKey
      */
     public function __construct($apiKey)
     {
         $this->apiKey = $apiKey;
-    } // function
+    }
 
     /**
      * Set a API feature. Available features:
@@ -160,26 +160,23 @@ class Request
      */
     public function fetch(array $parameters = [])
     {
-        if (isset($parameters['features']))
-        {
+        if (isset($parameters['features'])) {
             $this->setFeature($parameters['features']);
         }
 
-        if (isset($parameters['settings']))
-        {
+        if (isset($parameters['settings'])) {
             $this->setSettings($parameters['settings']);
         }
 
-        if (isset($parameters['query']))
-        {
+        if (isset($parameters['query'])) {
             $this->setQuery($parameters['query']);
         }
 
         $url = strtr(self::URL, [
-            ':apiKey'   => $this->apiKey,
+            ':apiKey' => $this->apiKey,
             ':features' => $this->features,
             ':settings' => $this->settings,
-            ':query'    => $this->query,
+            ':query' => $this->query,
         ]);
 
         $this->lastQuery = $url;
@@ -187,19 +184,16 @@ class Request
         $this->responseJSON = $this->request($url);
         $this->responseArray = json_decode($this->responseJSON, true);
 
-        if (!is_array($this->responseArray))
-        {
+        if (!is_array($this->responseArray)) {
             throw new WunderException('The Weather Underground API response returned no valid JSON: ' . $this->responseJSON);
         }
 
-        if (!isset($this->responseArray['response']))
-        {
+        if (!isset($this->responseArray['response'])) {
             throw new WunderException('The Weather Underground API response is not set or empty: ' . $this->responseJSON);
         }
 
-        if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error']))
-        {
-            throw new WunderException('The Weather Underground API responded with errors: ' . var_export($this->responseArray['response']['error'], true));
+        if (isset($this->responseArray['response']) && isset($this->responseArray['response']['error'])) {
+            throw new WunderException('The Weather Underground API responded with errors: ' . (string)var_export($this->responseArray['response']['error'], true));
         }
 
         return $this;
@@ -238,7 +232,7 @@ class Request
     /**
      * Method for getting the data from the API.
      *
-     * @param $url
+     * @param string $url
      * @return string
      */
     protected function request($url)

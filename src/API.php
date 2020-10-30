@@ -120,7 +120,7 @@ class API extends Request
     /**
      * Retrieves observed weather records and the daily summary for the specified date.
      *
-     * @param string $date     any valid {@link http://php.net/manual/en/datetime.formats.date.php Date Formats} format
+     * @param string $date any valid {@link http://php.net/manual/en/datetime.formats.date.php Date Formats} format
      * @param string $location Country/City, Lat,Lon, Airport code, etc.
      * @return array
      * @throws \ErrorException
